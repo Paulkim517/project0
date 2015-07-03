@@ -21,13 +21,13 @@ SaveRender.prototype.saveToLs = function(obj) {
   }
 
   items_json.push(obj);
-
+console.log("suckt it")
   localStorage.setItem(this.key, JSON.stringify(items_json));
 }
 
 SaveRender.prototype.renderTemplate = function(template_source, where) {
   var items_json = JSON.parse(this.items);
-
+console.log("suckt it times two")
   var template = _.template($(template_source).html());
 
   _.each(items_json, function(item) {
@@ -42,7 +42,7 @@ var myBlog = new Blog("Tryna figure this out", "Paul Kim", "2015-07-02", "https:
 
 myBlog.saveToLs(myBlog);
 
-myBlog.renderTemplate("#blog-template", "#bloh-container");
+myBlog.renderTemplate("#blog-template", "#blog-container");
 
 
 
