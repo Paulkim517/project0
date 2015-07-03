@@ -1,7 +1,6 @@
 
 // constructor for blog
-function Blog(title, userName, rant) {
-  this.title = title;
+function Blog(userName, rant) {
   this.userName = userName;
   this.rant = rant;
   this.items = localStorage.getItem("blogs");
@@ -13,7 +12,7 @@ function Blog(title, userName, rant) {
 function SaveRender(){}
 
 SaveRender.prototype.saveToLs = function(obj) {
-  var item = this.items_json;
+   this.items_json; // var item =
   if (this.items) {
     item = JSON.parse(this.items);
   } else {
@@ -47,7 +46,6 @@ $(document).ready(function(){
   // element to hold our list of todos
   var $blogSpot = $('#blog-template');
 
-
    // underscore template
    var template = _.template($("#blog-template").html());
     console.log(template)
@@ -55,22 +53,22 @@ $(document).ready(function(){
 
   // submit form to create new todo
     $myBlog.on('click', function(event) {
-    event.preventDefault();
-     console.log("suckt it")
+    // event.preventDefault();
+    
 
     // create new todo object from form data
-    var newTitle = $('#title').val();
     var newNewUser = $('#author').val();
+     console.log("suckt it")
     var newRant = $("#rant").val();
-    var myBlog = new Blog(newTitle,newNewUser,newRant);
+    var myBlog = new Blog(newNewUser,newRant);
     myBlog.saveToLs(myBlog);
     myBlog.renderTemplate("#blog-template", "#blog-container");
 
-    // reset the form
-    myBlog[0].reset();
+    
   
   });
-
+// reset the form
+     localStorage.clear();
 
 });
 

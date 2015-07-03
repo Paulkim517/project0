@@ -1,3 +1,3 @@
 project 0: microblog
 
-the blog takes in "my diary" and stores it and returns to the index.
+microBlog is an app where people can post rants,complaints,whines anonymously. using: jQuery,underscore.js,bootstrap

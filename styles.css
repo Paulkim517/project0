@@ -8,25 +8,25 @@
 
 .margin-top-10 {
 	margin-top:10px;
+
 }
 
 .margin-top-20 {
 	margin-top:20px;
-	text-align: center;
 }
 
-.book-container {
+.blog-container {
 	padding:20px 0;
 	background-color:#FFF;
 	transition:all 0.3s linear;
 }
 
-.book-container:hover {
+.blog-container:hover {
 	background-color:#DDD;
 	transition:all 0.3s ease-in-out;
 }
 
-.book-container img {
+.blog-container img {
 	border-radius:5px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
