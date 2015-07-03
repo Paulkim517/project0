@@ -1,18 +1,16 @@
 
 // constructor for blog
-function Blog(title, userName, postDate, rant) {
+function Blog(title, userName, rant) {
   this.title = title;
   this.userName = userName;
-  this.postDate = postDate;
   this.rant = rant;
-
   this.items = localStorage.getItem("blogs");
   this.key = "blogs";
   this.items_json = JSON.parse(this.items);
 }
 
 // render function to fill out information to blog
-function SaveRender() {}
+function SaveRender(){}
 
 SaveRender.prototype.saveToLs = function(obj) {
   var item = this.items_json;
@@ -38,15 +36,43 @@ SaveRender.prototype.renderTemplate = function(template_source, where) {
 Blog.prototype = new SaveRender();
 Blog.prototype.constructor = Blog;
 
-var myBlog = new Blog("Tryna figure this out", "BiggityBia", "2015-07-02","I can't seem to figure this stuff out.");
-
-myBlog.saveToLs(myBlog);
-
-myBlog.renderTemplate("#blog-template", "#blog-container");
 
 
 
+$(document).ready(function(){
 
+  // form to create new todo
+   var $myBlog = $('#save-book');
+
+  // element to hold our list of todos
+  var $blogSpot = $('#blog-template');
+
+
+   // underscore template
+   var template = _.template($("#blog-template").html());
+    console.log(template)
+
+
+  // submit form to create new todo
+    $myBlog.on('click', function(event) {
+    event.preventDefault();
+     console.log("suckt it")
+
+    // create new todo object from form data
+    var newTitle = $('#title').val();
+    var newNewUser = $('#author').val();
+    var newRant = $("#rant").val();
+    var myBlog = new Blog(newTitle,newNewUser,newRant);
+    myBlog.saveToLs(myBlog);
+    myBlog.renderTemplate("#blog-template", "#blog-container");
+
+    // reset the form
+    myBlog[0].reset();
+  
+  });
+
+
+});
 
 
 

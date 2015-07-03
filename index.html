@@ -28,8 +28,8 @@
 
     <script type="text/template" id="blog-template">
     <!--One Blog-->
-    <div class="row margin-top-20 blog-container">
-    <div class="col-sm-6"></div>
+    <div class="row margin-top-20 blog-container" class="newBlog">
+    <div class="col-sm-3"></div>
     
     <div class="margin-top-20">
     <span class="bold">Title: </span><span><%= title %></span>
@@ -40,16 +40,13 @@
     <div>
     <span class="bold">Rant: </span><span><%= rant %></span>
     </div>
-    <div>
-    <span class="bold">Post Date: </span><span><%= postDate %></span>
-    </div>
-    <div class="col-sm-6"></div>
+    <div class="col-sm-9"></div>
     </div>
     <!--/One Blog-->
     </script>
   </div>
 
-  <div class="container">
+  <div class="container" >
     <div class="margin-top-20">
       <a href="#" data-toggle="modal" data-target="#add-blog-modal" class="btn btn-primary">Add New Post</a>
     </div>
@@ -59,7 +56,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="addBlog"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title">Add New Blog</h4>
         </div>
         <div class="modal-body">
@@ -70,16 +67,10 @@
             <input id="title" type="text" class="form-control" />
           </div>
           <div class="bold margin-top-20">
-            userName
+            User Name
           </div>
           <div class="margin-top-20">
             <input id="author" type="text" class="form-control" />
-          </div>
-          <div class="bold margin-top-20">
-            Post Date
-          </div>
-          <div class="margin-top-20">
-            <input id="release-date" type="text" class="form-control" />
           </div>
           <div class="bold margin-top-20">
             Rant
