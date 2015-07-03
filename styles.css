@@ -12,6 +12,7 @@
 
 .margin-top-20 {
 	margin-top:20px;
+	text-align: center;
 }
 
 .book-container {
@@ -29,4 +30,17 @@
 	border-radius:5px;
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
+}
+
+#header {
+	text-align: center;
+}
+
+#subheader {
+	text-align: center;
+}
+
+#blog-container {
+	text-align: center;
+
 }
