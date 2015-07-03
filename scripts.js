@@ -1,10 +1,10 @@
 
 // constructor for blog
-function Blog(title, author, postDate, content) {
+function Blog(title, userName, postDate, rant) {
   this.title = title;
-  this.author = author;
+  this.userName = userName;
   this.postDate = postDate;
-  this.content = content;
+  this.rant = rant;
 
   this.items = localStorage.getItem("blogs");
   this.key = "blogs";
@@ -38,7 +38,7 @@ SaveRender.prototype.renderTemplate = function(template_source, where) {
 Blog.prototype = new SaveRender();
 Blog.prototype.constructor = Blog;
 
-var myBlog = new Blog("Tryna figure this out", "Paul Kim", "2015-07-02","I can't seem to figure this stuff out.");
+var myBlog = new Blog("Tryna figure this out", "BiggityBia", "2015-07-02","I can't seem to figure this stuff out.");
 
 myBlog.saveToLs(myBlog);
 

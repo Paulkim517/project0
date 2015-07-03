@@ -17,8 +17,8 @@
 
   <div class="jumbotron">
     <div class = "container">
-      <h1 id ="header">Blogette</h1>
-      <p id = "subheader">micro cigar = cigarette, micro blog = Blogette</p>
+      <h1 id ="header">Ranter</h1>
+      <p id = "subheader">Complain,whine,rant...anonymously</p>
     </div>
   </div>
 
@@ -29,25 +29,21 @@
     <script type="text/template" id="blog-template">
     <!--One Blog-->
     <div class="row margin-top-20 blog-container">
-    <div class="col-sm-3"></div>
+    <div class="col-sm-6"></div>
     
     <div class="margin-top-20">
     <span class="bold">Title: </span><span><%= title %></span>
       </div>
     <div>
-    <span class="bold">Author: </span><span><%= author %></span>
+    <span class="bold">User Name: </span><span><%= userName %></span>
       </div>
     <div>
-    <span class="bold">Content</span><span><%= content %></span>
+    <span class="bold">Rant: </span><span><%= rant %></span>
     </div>
     <div>
     <span class="bold">Post Date: </span><span><%= postDate %></span>
     </div>
-    <div class="margin-top-20">
-    <a href="#" class="btn btn-default">Edit Blog</a>
-    </div>
-    <div class="col-sm-9">
-    </div>
+    <div class="col-sm-6"></div>
     </div>
     <!--/One Blog-->
     </script>
@@ -74,7 +70,7 @@
             <input id="title" type="text" class="form-control" />
           </div>
           <div class="bold margin-top-20">
-            Author
+            userName
           </div>
           <div class="margin-top-20">
             <input id="author" type="text" class="form-control" />
@@ -86,10 +82,10 @@
             <input id="release-date" type="text" class="form-control" />
           </div>
           <div class="bold margin-top-20">
-            Content
+            Rant
           </div>
           <div class="margin-top-20">
-            <input id="content" type="text" class="form-control" />
+            <input id="rant" type="text" class="form-control" />
           </div>
           
         <div class="modal-footer">
