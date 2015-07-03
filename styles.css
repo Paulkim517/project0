@@ -13,23 +13,7 @@
 
 .margin-top-20 {
 	margin-top:20px;
-}
-
-.blog-container {
-	padding:20px 0;
-	background-color:#FFF;
-	transition:all 0.3s linear;
-}
-
-.blog-container:hover {
-	background-color:#DDD;
-	transition:all 0.3s ease-in-out;
-}
-
-.blog-container img {
-	border-radius:5px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
+	text-align: center;
 }
 
 #header {

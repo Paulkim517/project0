@@ -50,10 +50,9 @@ $(document).ready(function(){
    var template = _.template($("#blog-template").html());
     console.log(template)
 
-
   // submit form to create new todo
     $myBlog.on('click', function(event) {
-    // event.preventDefault();
+     event.preventDefault();
     
 
     // create new todo object from form data
@@ -64,11 +63,9 @@ $(document).ready(function(){
     myBlog.saveToLs(myBlog);
     myBlog.renderTemplate("#blog-template", "#blog-container");
 
-    
   
   });
-// reset the form
-     localStorage.clear();
+
 
 });
 
