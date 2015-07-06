@@ -18,20 +18,21 @@
 
 #header {
 	text-align: center;
-	color:white;
+	color:red;
 }
 
 #subheader {
 	text-align: center;
-	color:white;
+	color:red;
 }
 
 #blog-container {
 	text-align: center;
-	
+
+
 
 }
 
 .jumbotron{
-	background-color: black;
+	background: url(http://www.equinoxpub.com/blog/wp-content/uploads/2014/06/cat-unicorn600x322.jpg);
 }
