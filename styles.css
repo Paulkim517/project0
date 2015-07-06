@@ -18,13 +18,20 @@
 
 #header {
 	text-align: center;
+	color:white;
 }
 
 #subheader {
 	text-align: center;
+	color:white;
 }
 
 #blog-container {
 	text-align: center;
+	
 
+}
+
+.jumbotron{
+	background-color: black;
 }
